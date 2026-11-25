@@ -1,0 +1,52 @@
+{
+    "name": "takahironago/laravel-app-foundation",
+    "description": "Account, guest-trial and Stripe webhook building blocks shared by the ZEN and Tarot Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "illuminate/auth": "^13.0",
+        "illuminate/console": "^13.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/database": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/routing": "^13.0",
+        "illuminate/support": "^13.0",
+        "stripe/stripe-php": "^22.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^5.2",
+        "pestphp/pest-plugin-laravel": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TakahiroNago\\AppFoundation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TakahiroNago\\AppFoundation\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TakahiroNago\\AppFoundation\\AppFoundationServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "lint": "pint --test"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
